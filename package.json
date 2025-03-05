@@ -1,19 +1,14 @@
 {
   "name": "dog-grooming-app",
   "version": "1.0.0",
-  "description": "A modern dog grooming web application",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "start": "node server/src/index.js",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "server": "cd server && npm run dev",
-    "client": "cd client && npm run dev",
-    "install-all": "npm install && cd client && npm install && cd ../server && npm install"
+    "dev": "concurrently \"cd server && npm run dev\" \"cd client && npm run dev\"",
+    "install-deps": "cd client && npm install && cd ../server && npm install",
+    "build": "cd client && npm run build && cd ../server && npm run build",
+    "start": "cd server && npm start"
   },
-  "keywords": ["dog grooming", "pet services", "booking system"],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "concurrently": "^8.2.2"
   }
 }

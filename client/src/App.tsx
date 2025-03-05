@@ -4,6 +4,7 @@ import { Toaster } from 'react-hot-toast';
 // Layout Components
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
+import LoadingScreen from './components/layout/LoadingScreen';
 
 // Page Components
 import Home from './pages/Home';
@@ -15,6 +16,7 @@ import Blog from './pages/Blog';
 const App = () => {
   return (
     <div className="min-h-screen flex flex-col">
+      <LoadingScreen />
       <Toaster position="top-center" />
       <Navbar />
       <main className="flex-grow">

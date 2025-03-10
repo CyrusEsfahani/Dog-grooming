@@ -6,7 +6,7 @@ const LoadingScreen = () => {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    const duration = 5000; // Changed from 8000 to 5000 ms (5 seconds)
+    const duration = 2000; // Changed from 5000 to 2000 ms (2 seconds)
     const interval = 50;
     const steps = duration / interval;
     let currentStep = 0;
